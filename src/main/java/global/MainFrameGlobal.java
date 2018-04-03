@@ -26,10 +26,10 @@ public class MainFrameGlobal extends MainFrameGlobalAbstract {
             case "deleteWorker":
                 int selectRow = this.getTable().getSelectedRow();
                 if (selectRow > -1) {
-                    //     WorkerTableCollection.workers.remove(selectRow);
+                    StorageGlobal.getWorkers().remove(selectRow);
                     MainFrameGlobalAbstract.tableModel.fireTableDataChanged();
                 } else {
-                    //   new DeleteWorkerFrame();
+                    new DeleteWorkerFrameGlobal();
                 }
                 break;
             case "changeWorker":
