@@ -1,11 +1,7 @@
 package global.abstractsClasses;
 
-import Collection.FindWorkersTable;
-import Collection.WorkerTableCollection;
-import generalClasses.ExceptionMessage;
 import generalClasses.Worker;
-import global.toCollection.FindTableModel;
-import global.toCollection.WorkersTableModel;
+import generalClasses.WorkersTableModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,7 +21,7 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
     private JTable results;
     private String[] header = {"Name", "Surname", "Passport"};
     private List<Worker> findWorkers = new ArrayList<>();
-    private FindTableModel findWorkersTable;
+    private WorkersTableModel findWorkersTable;
 
     public FindWorkerFrameAbstract(List<Worker> findWorkers) {
         this.findWorkers = findWorkers;
@@ -70,7 +66,7 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
         JPanel rightPanel = new JPanel();
 
         rightPanel.setLayout(new GridLayout(1, 1));
-        findWorkersTable = new FindTableModel(findWorkers, header);
+        findWorkersTable = new WorkersTableModel(findWorkers, header);
         findWorkersTable.fireTableDataChanged();
         results = new JTable(findWorkersTable);
 
@@ -131,7 +127,7 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
         return findWorkers;
     }
 
-    public FindTableModel getFindWorkersTable() {
+    public WorkersTableModel getFindWorkersTable() {
         return findWorkersTable;
     }
 }

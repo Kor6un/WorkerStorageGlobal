@@ -1,4 +1,4 @@
-package global.abstractsClasses;
+package generalClasses;
 
 import generalClasses.Worker;
 
@@ -6,12 +6,12 @@ import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class WorkersTableModelAbstract extends AbstractTableModel {
+public class WorkersTableModel extends AbstractTableModel {
 
     private String[] header;
     private List<Worker> workers = new ArrayList<>();
 
-    public WorkersTableModelAbstract(List<Worker> workers, String[] header) {
+    public WorkersTableModel(List<Worker> workers, String[] header) {
         this.workers = workers;
         this.header = header;
     }

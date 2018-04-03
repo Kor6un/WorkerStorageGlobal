@@ -5,7 +5,6 @@ import generalClasses.Worker;
 import global.abstractsClasses.FindWorkerFrameAbstract;
 
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FindWorkerFrameGlobal extends FindWorkerFrameAbstract{
