@@ -50,7 +50,7 @@ public class MainFrameGlobal extends MainFrameGlobalAbstract {
                 }
                 break;
             case "findWorker":
-                //         new FindWorkerFrame();
+                new FindWorkerFrameGlobal(StorageGlobal.getFindWorkers());
                 break;
             default:
                 this.dispose();
