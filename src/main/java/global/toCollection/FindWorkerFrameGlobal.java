@@ -9,7 +9,6 @@ import java.util.List;
 
 public class FindWorkerFrameGlobal extends FindWorkerFrameAbstract{
 
-
     public FindWorkerFrameGlobal(List<Worker> findWorkers) {
         super(findWorkers);
     }

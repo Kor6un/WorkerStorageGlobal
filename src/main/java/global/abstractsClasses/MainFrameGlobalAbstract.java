@@ -12,15 +12,9 @@ import java.util.List;
 
 public abstract class MainFrameGlobalAbstract extends JFrame implements ActionListener, ComponentListener {
 
-    private static JButton addWorker;
-    private static JButton deleteWorker;
-    private static JButton changeWorker;
-    private static JButton findWorker;
-    private static JButton closeProgramm;
-    private static JTable table;
+    private JTable table;
     private final static String[] header = {"Name", "Surname", "Passport"};
-
-    public static WorkersTableModel tableModel;
+    private static WorkersTableModel tableModel;
 
     public MainFrameGlobalAbstract(List<Worker> workers) {
 
@@ -33,20 +27,20 @@ public abstract class MainFrameGlobalAbstract extends JFrame implements ActionLi
         JPanel buttonPanel = new JPanel();
 
         buttonPanel.setLayout(new GridLayout(5,1));
-        addWorker = new JButton("Добавить работника");
+        JButton addWorker = new JButton("Добавить работника");
         addWorker.setActionCommand("addWorker");
         addWorker.addActionListener(this);
-        deleteWorker = new JButton("Удалить работника");
+        JButton deleteWorker = new JButton("Удалить работника");
         deleteWorker.setActionCommand("deleteWorker");
         deleteWorker.addActionListener(this);
-        changeWorker = new JButton("Изменить работника");
+        JButton changeWorker = new JButton("Изменить работника");
         changeWorker.setActionCommand("changeWorker");
         changeWorker.addActionListener(this);
 
-        findWorker = new JButton("Найти работника");
+        JButton findWorker = new JButton("Найти работника");
         findWorker.setActionCommand("findWorker");
         findWorker.addActionListener(this);
-        closeProgramm = new JButton("Закрыть программу");
+        JButton closeProgramm = new JButton("Закрыть программу");
         closeProgramm.addActionListener(this);
 
         buttonPanel.add(addWorker);
@@ -71,52 +65,8 @@ public abstract class MainFrameGlobalAbstract extends JFrame implements ActionLi
         this.setVisible(true);
     }
 
-    public JButton getAddWorker() {
-        return addWorker;
-    }
-
-    public void setAddWorker(JButton addWorker) {
-        this.addWorker = addWorker;
-    }
-
-    public JButton getDeleteWorker() {
-        return deleteWorker;
-    }
-
-    public void setDeleteWorker(JButton deleteWorker) {
-        this.deleteWorker = deleteWorker;
-    }
-
-    public JButton getChangeWorker() {
-        return changeWorker;
-    }
-
-    public void setChangeWorker(JButton changeWorker) {
-        this.changeWorker = changeWorker;
-    }
-
-    public JButton getFindWorker() {
-        return findWorker;
-    }
-
-    public void setFindWorker(JButton findWorker) {
-        this.findWorker = findWorker;
-    }
-
-    public JButton getCloseProgramm() {
-        return closeProgramm;
-    }
-
-    public void setCloseProgramm(JButton closeProgramm) {
-        this.closeProgramm = closeProgramm;
-    }
-
     public JTable getTable() {
         return table;
-    }
-
-    public void setTable(JTable table) {
-        this.table = table;
     }
 
     public static String[] getHeader() {
@@ -125,10 +75,6 @@ public abstract class MainFrameGlobalAbstract extends JFrame implements ActionLi
 
     public static WorkersTableModel getTableModel() {
         return tableModel;
-    }
-
-    public static void setTableModel(WorkersTableModel tableModel) {
-        MainFrameGlobalAbstract.tableModel = tableModel;
     }
 
     @Override

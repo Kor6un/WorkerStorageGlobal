@@ -11,14 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class FindWorkerFrameAbstract extends JFrame implements ActionListener {
-    private JLabel findBy;
     private JTextField findField;
-    private JButton ok;
-    private JButton clear;
-    private JButton back;
     private JComboBox choice;
-
-    private JTable results;
     private String[] header = {"Name", "Surname", "Passport"};
     private List<Worker> findWorkers = new ArrayList<>();
     private WorkersTableModel findWorkersTable;
@@ -35,8 +29,7 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
         JPanel leftPanel = new JPanel();
         leftPanel.setLayout(new GridLayout(10, 1));
 
-
-        findBy = new JLabel("Найти по");
+        JLabel findBy = new JLabel("Найти по");
         choice = new JComboBox();
         choice.addItem("по имени");
         choice.addItem("по фамилии");
@@ -44,13 +37,13 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
 
         findField = new JTextField();
 
-        ok = new JButton("Найти");
+        JButton ok = new JButton("Найти");
         ok.setActionCommand("Find");
         ok.addActionListener(this);
-        clear = new JButton("Очистить");
+        JButton clear = new JButton("Очистить");
         clear.setActionCommand("Clear");
         clear.addActionListener(this);
-        back = new JButton("Назад");
+        JButton back = new JButton("Назад");
         back.setActionCommand("Back");
         back.addActionListener(this);
 
@@ -68,13 +61,15 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
         rightPanel.setLayout(new GridLayout(1, 1));
         findWorkersTable = new WorkersTableModel(findWorkers, header);
         findWorkersTable.fireTableDataChanged();
-        results = new JTable(findWorkersTable);
+        JTable results = new JTable(findWorkersTable);
 
         rightPanel.add(new JScrollPane(results), BorderLayout.CENTER);
 
         this.add(rightPanel);
         setVisible(true);
     }
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -83,51 +78,23 @@ public abstract class FindWorkerFrameAbstract extends JFrame implements ActionLi
 
     protected abstract void findWorker();
 
-    public JTextField getFindField() {
+    protected JTextField getFindField() {
         return findField;
-    }
-
-    public JButton getOk() {
-        return ok;
-    }
-
-    public void setOk(JButton ok) {
-        this.ok = ok;
-    }
-
-    public JButton getClear() {
-        return clear;
-    }
-
-    public void setClear(JButton clear) {
-        this.clear = clear;
-    }
-
-    public JButton getBack() {
-        return back;
-    }
-
-    public void setBack(JButton back) {
-        this.back = back;
-    }
-
-    public JComboBox getChoice() {
-        return choice;
     }
 
     public String[] getHeader() {
         return header;
     }
 
-    public void setHeader(String[] header) {
-        this.header = header;
-    }
-
-    public List<Worker> getFindWorkers() {
+    protected List<Worker> getFindWorkers() {
         return findWorkers;
     }
 
-    public WorkersTableModel getFindWorkersTable() {
+    protected WorkersTableModel getFindWorkersTable() {
         return findWorkersTable;
+    }
+
+    protected JComboBox getChoice() {
+        return choice;
     }
 }

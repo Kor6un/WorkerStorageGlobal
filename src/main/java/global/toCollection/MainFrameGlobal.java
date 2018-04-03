@@ -9,11 +9,8 @@ import java.util.List;
 
 public class MainFrameGlobal extends MainFrameGlobalAbstract {
 
-    private List<Worker> workers = StorageGlobal.getWorkers();
-
     public MainFrameGlobal(List<Worker> workers) {
         super(workers);
-        this.workers = workers;
     }
 
     @Override
@@ -28,7 +25,7 @@ public class MainFrameGlobal extends MainFrameGlobalAbstract {
                 int selectRow = this.getTable().getSelectedRow();
                 if (selectRow > -1) {
                     StorageGlobal.getWorkers().remove(selectRow);
-                    MainFrameGlobalAbstract.tableModel.fireTableDataChanged();
+                    getTableModel().fireTableDataChanged();
                 } else {
                     new DeleteWorkerFrameGlobal();
                 }
@@ -38,7 +35,7 @@ public class MainFrameGlobal extends MainFrameGlobalAbstract {
                     Worker changed;
                     int selectedRow = this.getTable().getSelectedRow();
                     if (selectedRow > -1) {
-                        changed  = MainFrameGlobal.getTableModel().getWorkers().get(selectedRow);
+                        changed  = getTableModel().getWorkers().get(selectedRow);
                     } else {
                         new ExceptionMessage("Не выбран рабочий для изменения");
                         return;

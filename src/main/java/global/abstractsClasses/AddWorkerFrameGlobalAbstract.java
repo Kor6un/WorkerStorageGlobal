@@ -9,11 +9,9 @@ import java.awt.event.ActionListener;
 
 public abstract class AddWorkerFrameGlobalAbstract extends JFrame implements ActionListener {
 
-    private JLabel textName, textSurname, textPassport;
     private  JTextField name;
     private  JTextField surname;
     private  JTextField passportNumber;
-    private JButton ok, clear, back;
 
     public AddWorkerFrameGlobalAbstract() {
         setSize(400, 300);
@@ -25,11 +23,11 @@ public abstract class AddWorkerFrameGlobalAbstract extends JFrame implements Act
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(6,1));
 
-        textName = new JLabel("Enter name");
+        JLabel textName = new JLabel("Enter name");
         name = new JTextField();
-        textSurname = new JLabel("Enter surname");
+        JLabel textSurname = new JLabel("Enter surname");
         surname = new JTextField();
-        textPassport = new JLabel("Enter passport number");
+        JLabel textPassport = new JLabel("Enter passport number");
         passportNumber = new JTextField();
 
         panel.add(textName);
@@ -46,13 +44,13 @@ public abstract class AddWorkerFrameGlobalAbstract extends JFrame implements Act
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(1,3));
 
-        ok = new JButton("Ok");
+        JButton ok = new JButton("Ok");
         ok.setActionCommand("Added");
         ok.addActionListener(this);
-        clear = new JButton("Clear");
+        JButton clear = new JButton("Clear");
         clear.setActionCommand("Clear");
         clear.addActionListener(this);
-        back = new JButton("Back");
+        JButton back = new JButton("Back");
         back.setActionCommand("Back");
         back.addActionListener(this);
         buttonPanel.add(ok);

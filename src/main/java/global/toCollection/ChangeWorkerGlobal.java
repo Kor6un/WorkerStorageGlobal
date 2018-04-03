@@ -4,9 +4,9 @@ import generalClasses.Worker;
 import global.abstractsClasses.ChangeWorkerFrameAbstract;
 
 public class ChangeWorkerGlobal extends ChangeWorkerFrameAbstract {
-    Worker worker;
+    private Worker worker;
 
-    public ChangeWorkerGlobal(Worker worker) {
+    ChangeWorkerGlobal(Worker worker) {
         super(worker);
         this.worker = worker;
     }

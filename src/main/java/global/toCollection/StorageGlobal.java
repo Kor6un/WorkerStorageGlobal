@@ -17,11 +17,8 @@ public class StorageGlobal {
         StorageGlobal.workers = workers;
     }
 
-    public static List<Worker> getFindWorkers() {
+    static List<Worker> getFindWorkers() {
         return findWorkers;
     }
 
-    public static void setFindWorkers(List<Worker> findWorkers) {
-        StorageGlobal.findWorkers = findWorkers;
-    }
 }

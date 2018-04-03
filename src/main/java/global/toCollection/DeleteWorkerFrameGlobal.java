@@ -6,7 +6,6 @@ import global.abstractsClasses.DeleteWorkerFrameAbstract;
 
 public class DeleteWorkerFrameGlobal extends DeleteWorkerFrameAbstract {
 
-
     @Override
     protected void deleteWorker() {
 
