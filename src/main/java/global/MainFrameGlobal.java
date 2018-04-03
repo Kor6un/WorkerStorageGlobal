@@ -1,5 +1,6 @@
 package global;
 
+import generalClasses.ExceptionMessage;
 import generalClasses.Worker;
 import global.abstractsClasses.MainFrameGlobalAbstract;
 
@@ -33,12 +34,20 @@ public class MainFrameGlobal extends MainFrameGlobalAbstract {
                 }
                 break;
             case "changeWorker":
-                Worker changed = null;
-                int selectedRow = this.getTable().getSelectedRow();
-                if (selectedRow > -1) {
-                    changed  = MainFrameGlobal.getTableModel().workers.get(selectedRow);
+                if (!StorageGlobal.getWorkers().isEmpty()) {
+                    Worker changed;
+                    int selectedRow = this.getTable().getSelectedRow();
+                    if (selectedRow > -1) {
+                        changed  = MainFrameGlobal.getTableModel().getWorkers().get(selectedRow);
+                    } else {
+                        new ExceptionMessage("Не выбран рабочий для изменения");
+                        return;
+                    }
+                    new ChangeWorkerGlobal(changed);
+                } else {
+                    new ExceptionMessage("Список работников пуст");
+                    return;
                 }
-                new ChangeWorkerGlobal(changed);
                 break;
             case "findWorker":
                 //         new FindWorkerFrame();

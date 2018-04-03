@@ -1,8 +1,9 @@
 package global.abstractsClasses;
 
-import Collection.MainFrame;
+import generalClasses.ExceptionMessage;
 import generalClasses.Worker;
 import global.MainFrameGlobal;
+import global.StorageGlobal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,6 +41,7 @@ public abstract class ChangeWorkerFrameAbstract extends JFrame implements Action
         name.setText(worker.getName());
         surname.setText(worker.getSurname());
         passportNumber.setText(worker.getPassportNumber());
+
         panel.add(textName);
         panel.add(name);
         panel.add(textSurname);
