@@ -36,9 +36,9 @@ public class MainFrameGlobal extends MainFrameGlobalAbstract {
                 Worker changed = null;
                 int selectedRow = this.getTable().getSelectedRow();
                 if (selectedRow > -1) {
-                    //             changed  = WorkerTableCollection.workers.get(selectedRow);
+                    changed  = MainFrameGlobal.getTableModel().workers.get(selectedRow);
                 }
-                //         new ChangeWorkerFrame(changed);
+                new ChangeWorkerGlobal(changed);
                 break;
             case "findWorker":
                 //         new FindWorkerFrame();
