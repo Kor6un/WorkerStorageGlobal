@@ -1,4 +1,4 @@
-package global;
+package global.toCollection;
 
 import generalClasses.ExceptionMessage;
 import generalClasses.Worker;

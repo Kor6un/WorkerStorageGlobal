@@ -1,6 +1,5 @@
-package global;
+package global.toCollection;
 
-import generalClasses.ExceptionMessage;
 import generalClasses.Worker;
 import global.abstractsClasses.ChangeWorkerFrameAbstract;
 

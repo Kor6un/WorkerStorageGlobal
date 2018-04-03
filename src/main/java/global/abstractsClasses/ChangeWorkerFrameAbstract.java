@@ -1,9 +1,7 @@
 package global.abstractsClasses;
 
-import generalClasses.ExceptionMessage;
 import generalClasses.Worker;
-import global.MainFrameGlobal;
-import global.StorageGlobal;
+import global.toCollection.MainFrameGlobal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -126,7 +124,6 @@ public abstract class ChangeWorkerFrameAbstract extends JFrame implements Action
         this.textPassport = textPassport;
     }
 
-    @Override
     public String getName() {
         return name.getText();
     }

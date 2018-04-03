@@ -1,6 +1,6 @@
 package global.abstractsClasses;
 
-import global.MainFrameGlobal;
+import global.toCollection.MainFrameGlobal;
 
 import javax.swing.*;
 import java.awt.*;

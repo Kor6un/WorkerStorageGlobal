@@ -1,4 +1,4 @@
-package global;
+package global.toCollection;
 
 import generalClasses.Worker;
 import global.abstractsClasses.AddWorkerFrameGlobalAbstract;

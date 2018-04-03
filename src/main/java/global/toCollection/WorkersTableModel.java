@@ -1,9 +1,8 @@
-package global;
+package global.toCollection;
 
 import generalClasses.Worker;
 import global.abstractsClasses.WorkersTableModelAbstract;
 
-import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
 public class WorkersTableModel extends WorkersTableModelAbstract {

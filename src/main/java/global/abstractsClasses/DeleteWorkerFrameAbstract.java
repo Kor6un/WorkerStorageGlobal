@@ -1,10 +1,6 @@
 package global.abstractsClasses;
 
-import Collection.MainFrame;
-import Collection.WorkerTableCollection;
-import generalClasses.ExceptionMessage;
-import global.MainFrameGlobal;
-import global.StorageGlobal;
+import global.toCollection.MainFrameGlobal;
 
 import javax.swing.*;
 import java.awt.*;

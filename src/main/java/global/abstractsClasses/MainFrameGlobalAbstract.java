@@ -1,7 +1,7 @@
 package global.abstractsClasses;
 
 import generalClasses.Worker;
-import global.WorkersTableModel;
+import global.toCollection.WorkersTableModel;
 
 import javax.swing.*;
 import java.awt.*;

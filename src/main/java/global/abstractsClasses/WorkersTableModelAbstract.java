@@ -1,7 +1,6 @@
 package global.abstractsClasses;
 
 import generalClasses.Worker;
-import global.StorageGlobal;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
