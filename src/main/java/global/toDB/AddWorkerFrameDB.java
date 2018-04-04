@@ -14,10 +14,10 @@ public class AddWorkerFrameDB extends AddWorkerFrameGlobalAbstract {
 
     @Override
     protected void addWorker() {
-        Connection connection;
+
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Workers",
+            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Workers",
                     "postgres", "");
             try {
                 PreparedStatement statement =
@@ -30,7 +30,7 @@ public class AddWorkerFrameDB extends AddWorkerFrameGlobalAbstract {
 
                 statement.execute();
             } catch (SQLException e) {
-                throw new SQLException("нарушено ограничение уникальности");
+                throw new SQLException("Нарушено ограничение уникальности");
             }
         } catch (Exception e1) {
             new ExceptionMessage("Ошибка подключения к БД (global)");

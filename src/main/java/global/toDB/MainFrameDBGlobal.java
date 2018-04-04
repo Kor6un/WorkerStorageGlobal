@@ -52,12 +52,12 @@ public class MainFrameDBGlobal extends MainFrameGlobalAbstract{
                                 " WHERE passport = ?");
 
                         statement.setInt(1,
-                                Integer.parseInt(WorkersTableDB.workers.get(selectRow).getPassportNumber()));
+                                Integer.parseInt(StorageGlobal.getWorkers().get(selectRow).getPassportNumber()));
                         statement.executeUpdate();
                         connection.setAutoCommit(false);
                         connection.close();
 
-                        WorkersTableDB.workers.remove(selectRow);
+                        StorageGlobal.getWorkers().remove(selectRow);
                         getTableModel().fireTableDataChanged();
                     } catch (SQLException e1) {
                         new ExceptionMessage("Такого рабочего нет в БД (delDB)");
