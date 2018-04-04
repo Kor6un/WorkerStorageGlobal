@@ -73,7 +73,7 @@ public abstract class MainFrameGlobalAbstract extends JFrame implements ActionLi
         return header;
     }
 
-    public static WorkersTableModel getTableModel() {
+    protected static WorkersTableModel getTableModel() {
         return tableModel;
     }
 

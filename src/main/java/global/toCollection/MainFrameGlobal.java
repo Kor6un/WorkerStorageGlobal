@@ -2,6 +2,7 @@ package global.toCollection;
 
 import generalClasses.ExceptionMessage;
 import generalClasses.Worker;
+import global.StorageGlobal;
 import global.abstractsClasses.MainFrameGlobalAbstract;
 
 import java.awt.event.ActionEvent;

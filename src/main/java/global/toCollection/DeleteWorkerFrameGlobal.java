@@ -2,6 +2,7 @@ package global.toCollection;
 
 import Collection.WorkerTableCollection;
 import generalClasses.ExceptionMessage;
+import global.StorageGlobal;
 import global.abstractsClasses.DeleteWorkerFrameAbstract;
 
 public class DeleteWorkerFrameGlobal extends DeleteWorkerFrameAbstract {

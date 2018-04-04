@@ -1,6 +1,7 @@
 package global.toCollection;
 
 import generalClasses.Worker;
+import global.StorageGlobal;
 import global.abstractsClasses.AddWorkerFrameGlobalAbstract;
 
 public class AddWorkerFrameGlobal extends AddWorkerFrameGlobalAbstract {
